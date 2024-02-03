@@ -11,8 +11,8 @@ API_KEY = os.getenv("OPENAI_API_KEY")
 
 chat = ChatOpenAI(model="gpt-4-1106-preview", temperature=0.2, openai_api_key=API_KEY)
 
-@app.route('/news', methods=['GET'])
-def get_news():
+@app.route('/gpt', methods=['GET'])
+def get_response():
     parameters = {
         'prompt': request.args.get('prompt'),
     }
