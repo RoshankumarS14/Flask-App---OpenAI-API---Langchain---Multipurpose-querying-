@@ -1,5 +1,6 @@
 import streamlit as st
 from airtable import Airtable
+import os
 
 base_key = 'appDeLA2xgfphKya3'
 table_name = 'Prompts'
