@@ -7,10 +7,9 @@ import json
 
 app = Flask(__name__)
 CORS(app)
-# API_KEY = os.getenv("OPENAI_API_KEY")
-os.environ["OPENAI_API_KEY"] = 
+API_KEY = os.getenv("OPENAI_API_KEY")
 
-chat = ChatOpenAI(model="gpt-4-1106-preview", temperature=0.2, openai_api_key=)
+chat = ChatOpenAI(model="gpt-4-1106-preview", temperature=0.2, openai_api_key=API_KEY)
 
 @app.route('/news', methods=['GET'])
 def get_news():
