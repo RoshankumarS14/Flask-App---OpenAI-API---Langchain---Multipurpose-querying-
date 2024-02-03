@@ -32,7 +32,7 @@ Question:
     ]
     )
     response = json.loads(response.json())
-    return response
+    return {"response":response["content"]}
 
 if __name__ == '__main__':
     app.run(debug=True)
