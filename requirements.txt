@@ -6,3 +6,4 @@ langchain-core
 openai
 gunicorn
 airtable-python-wrapper
+streamlit
