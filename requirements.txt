@@ -5,4 +5,4 @@ langchain-openai
 langchain-core
 openai
 gunicorn
-airtable
+airtable-python-wrapper
