@@ -10,7 +10,7 @@ app = Flask(__name__)
 CORS(app)
 API_KEY = os.getenv("OPENAI_API_KEY")
 
-chat = ChatOpenAI(model="gpt-4-1106-preview", temperature=0.2, openai_api_key=API_KEY)
+chat = ChatOpenAI(model="gpt-4-0125-preview", temperature=0.2, openai_api_key=API_KEY)
 
 base_key = 'appDeLA2xgfphKya3'
 table_name = 'Prompts'
