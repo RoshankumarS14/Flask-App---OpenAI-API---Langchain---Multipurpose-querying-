@@ -15,12 +15,11 @@ chat = ChatOpenAI(model="gpt-4-0125-preview", temperature=0.2, openai_api_key=AP
 base_key = 'appDeLA2xgfphKya3'
 table_name = 'Prompts'
 airtable_api_key = os.getenv("AIRTABLE_API_KEY")
-airtable1 = Airtable(base_key, table_name, airtable_api_key)
-
-prompts_data = {i["fields"]["Title"]:i["fields"]["Prompt Instructions"] for i in airtable1.get_all()}
 
 @app.route('/gpt', methods=['GET'])
 def get_response():
+    airtable1 = Airtable(base_key, table_name, airtable_api_key)
+    prompts_data = {i["fields"]["Title"]:i["fields"]["Prompt Instructions"] for i in airtable1.get_all()}
     parameters = {
         'prompt': request.args.get('prompt'),
         'category': request.args.get('category')
